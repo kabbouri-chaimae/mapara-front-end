@@ -1,0 +1,43 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>commande List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>type_cmd</th>
+        <th>statut</th>
+        <th>statut_de_payment</th>
+        <th>produit</th>
+        <th>date</th>
+
+
+
+
+
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let commande of commandes | async">
+        <td>{{commande.type_cmd}}</td>
+        <td>{{commande.statut}}</td>
+        <td>{{commande.statut_de_payment}}</td>
+
+
+        <td>{{commande.produit}}</td>
+        <td>{{commande.date}}</td>
+
+
+
+
+
+        <td><button (click)="deleteCommande(commande.id)" class="btn btn-danger">Delete</button>
+          <button (click)="commandeDetails(commande.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

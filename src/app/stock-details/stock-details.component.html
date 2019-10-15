@@ -1,0 +1,26 @@
+<h2>stock Details</h2>
+
+<hr/>
+<div *ngIf="stock">
+  <div>
+    <label><b>categorie: </b></label> {{stock.categorie}}
+  </div>
+  <div>
+    <label><b>nom_fournisseur: </b></label> {{stock.nom_fournisseur}}
+  </div>
+  <div>
+    <label><b>qantite: </b></label> {{stock.qantite}}
+  </div>
+  <div>
+    <label><b>date: </b></label> {{stock.date}}
+  </div>
+
+
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Stock List</button><br>
+
+

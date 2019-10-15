@@ -1,0 +1,27 @@
+<h2>commande Details</h2>
+
+<hr/>
+<div *ngIf="commande">
+  <div>
+    <label><b>type_cmd: </b></label> {{commande.type_cmd}}
+  </div>
+  <div>
+    <label><b>statut: </b></label> {{commande.statut}}
+  </div>
+  <div>
+    <label><b>statut_de_payment: </b></label> {{commande.statut_de_payment}}
+  </div>
+  <div>
+    <label><b> produit: </b></label> {{commande. produit}}
+  </div>
+  <div>
+    <label><b>date: </b></label> {{commande.date}}
+  </div>
+
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Commande List</button><br>
+

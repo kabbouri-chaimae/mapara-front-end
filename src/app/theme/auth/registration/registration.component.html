@@ -1,0 +1,130 @@
+<section class="login-block" xmlns:th="http://www.w3.org/1999/xhtml">
+  <!-- Container-fluid starts -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <!-- Authentication card start -->
+        <form class="md-float-material form-material">
+          <div class="text-center">
+            <img src="assets/images/logo.png" alt="logo.png">
+          </div>
+          <div class="auth-box card">
+            <div class="card-block">
+              <div class="row m-b-20">
+                <div class="col-md-12">
+                  <h3 class="text-center txt-primary">Sign up</h3>
+                </div>
+              </div>
+              <div class="row m-b-20">
+                <div class="col-md-6">
+                  <a href="javascript:" class="btn btn-facebook m-b-20 btn-block ripple light"><i class="fa fa-facebook"></i>facebook</a>
+                </div>
+                <div class="col-md-6">
+                  <a href="javascript:" class="btn btn-twitter m-b-0 btn-block ripple light"><i class="fa fa-twitter"></i>twitter</a>
+                </div>
+              </div>
+              <p class="text-muted text-center p-b-5">Sign up with your regular account</p>
+
+
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <div th:if="${param.success}">
+        <div class="alert alert-info">You've successfully registered
+          to our awesome app!</div>
+      </div>
+
+
+      <form th:action="@{/registration}" th:object="${user}" method="post">
+
+        <p class="error-message" th:if="${#fields.hasGlobalErrors()}"
+           th:each="error : ${#fields.errors('global')}" th:text="${error}">Validation
+          error</p>
+
+        <div class="form-group"
+             th:classappend="${#fields.hasErrors('firstName')}? 'has-error':''">
+          <label for="firstName" class="control-label">First name</label> <input
+          id="firstName" class="form-control" th:field="*{firstName}" />
+          <p class="error-message"
+             th:each="error: ${#fields.errors('firstName')}"
+             th:text="${error}">Validation error</p>
+        </div>
+        <div class="form-group"
+             th:classappend="${#fields.hasErrors('lastName')}? 'has-error':''">
+          <label for="lastName" class="control-label">Last name</label> <input
+          id="lastName" class="form-control" th:field="*{lastName}" />
+          <p class="error-message"
+             th:each="error : ${#fields.errors('lastName')}"
+             th:text="${error}">Validation error</p>
+        </div>
+        <div class="form-group"
+             th:classappend="${#fields.hasErrors('email')}? 'has-error':''">
+          <label for="email" class="control-label">E-mail</label> <input
+          id="email" class="form-control" th:field="*{email}" />
+          <p class="error-message"
+             th:each="error : ${#fields.errors('email')}" th:text="${error}">Validation
+            error</p>
+        </div>
+        <div class="form-group"
+             th:classappend="${#fields.hasErrors('confirmEmail')}? 'has-error':''">
+          <label for="confirmEmail" class="control-label">Confirm
+            e-mail</label> <input id="confirmEmail" class="form-control"
+                                  th:field="*{confirmEmail}" />
+          <p class="error-message"
+             th:each="error : ${#fields.errors('confirmEmail')}"
+             th:text="${error}">Validation error</p>
+        </div>
+        <div class="form-group"
+             th:classappend="${#fields.hasErrors('password')}? 'has-error':''">
+          <label for="password" class="control-label">Password</label> <input
+          id="password" class="form-control" type="password"
+          th:field="*{password}" />
+          <p class="error-message"
+             th:each="error : ${#fields.errors('password')}"
+             th:text="${error}">Validation error</p>
+        </div>
+        <div class="form-group"
+             th:classappend="${#fields.hasErrors('confirmPassword')}? 'has-error':''">
+          <label for="confirmPassword" class="control-label">Confirm
+            password</label> <input id="confirmPassword" class="form-control"
+                                    type="password" th:field="*{confirmPassword}" />
+          <p class="error-message"
+             th:each="error : ${#fields.errors('confirmPassword')}"
+             th:text="${error}">Validation error</p>
+        </div>
+        <div class="form-group"
+             th:classappend="${#fields.hasErrors('terms')}? 'has-error':''">
+          <input id="terms" type="checkbox" th:field="*{terms}" />   <label
+          class="control-label" for="terms"> I agree with the <a
+          href="#">terms and conditions</a> for Registration.
+        </label>
+          <p class="error-message"
+             th:each="error : ${#fields.errors('terms')}" th:text="${error}">Validation
+            error</p>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success">Register</button>
+          <span>Already registered? <a href="/" th:href="@{/login}">Login
+								here</a></span>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </form>
+        <!-- Authentication card end -->
+      </div>
+      <!-- end of col-sm-12 -->
+    </div>
+    <!-- end of row -->
+  </div>
+  <!-- end of container-fluid -->
+</section>

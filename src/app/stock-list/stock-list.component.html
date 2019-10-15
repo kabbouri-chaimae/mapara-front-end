@@ -1,0 +1,43 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>stock List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>categorie</th>
+        <th>nom_fournisseur</th>
+        <th>qantite</th>
+        <th>date</th>
+
+
+
+
+
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let stock of stocks | async">
+        <td>{{stock.categorie}}</td>
+        <td>{{stock.nom_fournisseur}}</td>
+        <td>{{stock.qantite}}</td>
+
+
+
+        <td>{{stock.date}}</td>
+
+
+
+
+
+        <td><button (click)="deleteStock(stock.id)" class="btn btn-danger">Delete</button>
+          <button (click)="stockDetails(stock.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

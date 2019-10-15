@@ -1,0 +1,29 @@
+<h2>fournisseur Details</h2>
+
+<hr/>
+<div *ngIf="fournisseur">
+  <div>
+    <label><b>num_compte_bancaire: </b></label> {{fournisseur.num_compte_bancaire}}
+  </div>
+  <div>
+    <label><b>nom: </b></label> {{fournisseur.nom}}
+  </div>
+
+
+  <div>
+    <label><b>email: </b></label> {{fournisseur.email}}
+  </div>
+
+  <div>
+    <label><b>adress: </b></label> {{fournisseur.adress}}
+  </div>
+
+
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Fournisseur List</button><br>
+
+

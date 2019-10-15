@@ -1,0 +1,30 @@
+<h2>product Details</h2>
+
+<hr/>
+<div *ngIf="produit">
+  <div>
+    <label><b>titre: </b></label> {{produit.titre}}
+  </div>
+  <div>
+    <label><b>description: </b></label> {{produit.description}}
+  </div>
+  <div>
+    <label><b>Code_barres: </b></label> {{produit.Code_barres}}
+  </div>
+  <div>
+    <label><b>prix: </b></label> {{produit.prix}}
+  </div>
+  <div>
+    <label><b>quantitelivre: </b></label> {{produit.quantitelivre}}
+  </div>
+  <div>
+    <label><b>quantite: </b></label> {{produit.quantite}}
+  </div>
+
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Produit List</button><br>
+
+
