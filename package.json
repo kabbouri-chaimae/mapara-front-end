@@ -48,7 +48,7 @@
     "highcharts": "^6.2.0",
     "ic-datepicker": "^0.1.3",
     "jquery": "^3.4.1",
-    "jszip": "^3.2.2",
+    "jszip": "^3.7.0",
     "moment": "^2.24.0",
     "ng-click-outside": "^4.0.0",
     "ng-number-formatter": "^1.5.0",
